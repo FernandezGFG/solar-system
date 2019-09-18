@@ -13,7 +13,7 @@ void setup(){
 
 void draw(){
   if(flag_mode){
-    camera.setDistance(500);
+    camera.setDistance(650);
     sun_draw();
   } else {
     camera.setDistance(180);
