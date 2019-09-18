@@ -87,7 +87,8 @@ Planet jupiter_setup(){
   // Add satellite
   io = io_setup();
   europa = europa_setup();
-  Planet[] sats = {io, europa};
+  ganymede = ganymede_setup();
+  Planet[] sats = {io, europa, ganymede};
   jupiter.setSattelites(sats);
   
   return jupiter;

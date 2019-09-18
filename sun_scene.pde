@@ -1,7 +1,7 @@
 Planet sun;
 
 PImage img_sun;
-float r_sun = 50;
+float r_sun = 80;
 
 int flag_arrow;
 boolean flag_rot;

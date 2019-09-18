@@ -1,6 +1,6 @@
-Planet phobos, deimos, io, europa;
+Planet phobos, deimos, io, europa, ganymede;
 
-PImage img_phobos, img_deimos, img_io, img_europa;
+PImage img_phobos, img_deimos, img_io, img_europa, img_ganymede;
 
 Planet phobos_setup(){
   img_phobos = loadImage("assets/imgs/phobos.jpg");
@@ -46,10 +46,23 @@ Planet europa_setup(){
   
   float r_europa = 0.05*r_jupiter;
   PVector axis_europa = new PVector(0, 1, 0);
-  PVector dir_europa = new PVector(1, 1, 0);
+  PVector dir_europa = new PVector(0, 1, 1);
   dir_europa.mult(r_jupiter+5);
     
   europa = new Satellite("Europa", r_europa, dir_europa, 0.005, axis_europa, 0.005, img_europa);
   
   return europa;
+}
+
+Planet ganymede_setup(){
+  img_ganymede = loadImage("assets/imgs/ganymede.jpg");
+  
+  float r_ganymede = 0.05*r_jupiter;
+  PVector axis_ganymede = new PVector(0, 1, 0);
+  PVector dir_ganymede = new PVector(1, 1, 0);
+  dir_ganymede.mult(r_jupiter+5);
+    
+  ganymede = new Satellite("Ganymede", r_ganymede, dir_ganymede, 0.005, axis_ganymede, 0.005, img_ganymede);
+  
+  return ganymede;
 }
