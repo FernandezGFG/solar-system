@@ -56,6 +56,43 @@ public class Planet {
     axis = z;
   }
   
+  Planet(String name, float r, PVector d, float s, PVector z, float st, PImage tex, int rings){
+    /**
+     * Planet constructor.
+     *
+     * @param  float    r: planet's radius.
+     * @param  PVector  d: planet's direction to "father" object.
+     * @param  float    s: planet's angulat velocity around axis.
+     * @param  PVector  z: planet's axis.
+     * @param  PImage   tex: planet's texture.
+     */
+     
+    id = name;
+
+    radius = r;
+    vel_rot = s;
+    vel_tras = st;
+    
+    dir = d;
+    
+    globe = createShape(GROUP);
+    
+    noStroke();
+    noFill();
+    PShape aux = createShape(SPHERE, radius);
+    aux.setTexture(tex);
+    globe.addChild(aux);
+    stroke(255, 200, 100, 50);
+    for (int  i=0; i<rings; i++){
+      float a = random(2.2, 2.6);
+      float b = random(2.6, 5);
+      aux = createShape(ELLIPSE, 0, 0, a*radius, b*radius);
+      globe.addChild(aux);
+    }
+    
+    axis = z;
+  }
+  
   
   void setSattelites(Planet[] sats){
     /**

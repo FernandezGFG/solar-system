@@ -1,7 +1,7 @@
-Planet earth, mercury, venus, mars, jupiter;
+Planet earth, mercury, venus, mars, jupiter, saturn;
 
-PImage img_earth, img_mercury, img_venus, img_mars, img_jupiter;
-float r_earth, r_mercury, r_venus, r_mars, r_jupiter;
+PImage img_earth, img_mercury, img_venus, img_mars, img_jupiter, img_saturn;
+float r_earth, r_mercury, r_venus, r_mars, r_jupiter, r_saturn;
 
 // EARTH
 Planet earth_setup(){
@@ -27,7 +27,7 @@ Planet earth_setup(){
 
 // MERCURY
 Planet mercury_setup(){
-  // Load Earth texture
+  // Load Mercury texture
   img_mercury = loadImage("assets/imgs/mercury.jpg");
   PVector axis_mercury = new PVector(0, 1, 0);
   PVector dir_mercury = new PVector(110, 0, 0);
@@ -41,7 +41,7 @@ Planet mercury_setup(){
 
 // VENUS
 Planet venus_setup(){
-  // Load Earth texture
+  // Load Venus texture
   img_venus = loadImage("assets/imgs/venus.jpg");
   PVector axis_venus = new PVector(0, 1, 0);
   PVector dir_venus = new PVector(150, 0, 0);
@@ -55,7 +55,7 @@ Planet venus_setup(){
 
 // MARS
 Planet mars_setup(){
-  // Load Earth texture
+  // Load Mars texture
   img_mars = loadImage("assets/imgs/mars.jpg");
   PVector axis_mars = new PVector(0, 1, 0);
   PVector dir_mars = new PVector(190, 0, 0);
@@ -75,7 +75,7 @@ Planet mars_setup(){
 
 // JUPITER
 Planet jupiter_setup(){
-  // Load Earth texture
+  // Load Jupiter texture
   img_jupiter = loadImage("assets/imgs/jupiter.jpg");
   PVector axis_jupiter = new PVector(0, 1, 0);
   PVector dir_jupiter = new PVector(290, 0, 0);
@@ -88,8 +88,27 @@ Planet jupiter_setup(){
   io = io_setup();
   europa = europa_setup();
   ganymede = ganymede_setup();
-  Planet[] sats = {io, europa, ganymede};
+  callisto = callisto_setup();
+  Planet[] sats = {io, europa, ganymede, callisto};
   jupiter.setSattelites(sats);
   
   return jupiter;
+}
+
+// SATURN
+Planet saturn_setup(){
+  // Load Saturn texture
+  img_saturn = loadImage("assets/imgs/saturn.jpg");
+  PVector axis_saturn = new PVector(0, 1, 0);
+  PVector dir_saturn = new PVector(420, 0, 0);
+  
+  r_saturn = 9.449*r_earth;
+  
+  saturn = new Planet("Saturn", r_saturn, dir_saturn, 0.005, axis_saturn, 0.006, img_saturn, 50);
+  
+  // Add satellite
+  Planet[] sats = {};
+  saturn.setSattelites(sats);
+  
+  return saturn;
 }

@@ -20,7 +20,8 @@ void sun_setup(){
   venus = venus_setup();
   mars = mars_setup();
   jupiter = jupiter_setup();
-  Planet[] sats = {earth, mercury, venus, mars, jupiter};
+  saturn = saturn_setup();
+  Planet[] sats = {earth, mercury, venus, mars, jupiter, saturn};
   sun.setSattelites(sats);
   
   flag_arrow = 0;

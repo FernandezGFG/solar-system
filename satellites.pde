@@ -1,6 +1,6 @@
-Planet phobos, deimos, io, europa, ganymede;
+Planet phobos, deimos, io, europa, ganymede, callisto;
 
-PImage img_phobos, img_deimos, img_io, img_europa, img_ganymede;
+PImage img_phobos, img_deimos, img_io, img_europa, img_ganymede, img_callisto;
 
 Planet phobos_setup(){
   img_phobos = loadImage("assets/imgs/phobos.jpg");
@@ -49,7 +49,7 @@ Planet europa_setup(){
   PVector dir_europa = new PVector(0, 1, 1);
   dir_europa.mult(r_jupiter+5);
     
-  europa = new Satellite("Europa", r_europa, dir_europa, 0.005, axis_europa, 0.005, img_europa);
+  europa = new Satellite("Europa", r_europa, dir_europa, 0.005, axis_europa, 0.006, img_europa);
   
   return europa;
 }
@@ -62,7 +62,20 @@ Planet ganymede_setup(){
   PVector dir_ganymede = new PVector(1, 1, 0);
   dir_ganymede.mult(r_jupiter+5);
     
-  ganymede = new Satellite("Ganymede", r_ganymede, dir_ganymede, 0.005, axis_ganymede, 0.005, img_ganymede);
+  ganymede = new Satellite("Ganymede", r_ganymede, dir_ganymede, 0.005, axis_ganymede, 0.007, img_ganymede);
   
   return ganymede;
+}
+
+Planet callisto_setup(){
+  img_callisto = loadImage("assets/imgs/callisto.jpg");
+  
+  float r_callisto = 0.05*r_jupiter;
+  PVector axis_callisto = new PVector(0, 1, 0);
+  PVector dir_callisto = new PVector(0, 1, 1);
+  dir_callisto.mult(r_jupiter+5);
+    
+  callisto = new Satellite("Callisto", r_callisto, dir_callisto, 0.005, axis_callisto, 0.008, img_callisto);
+  
+  return callisto;
 }
