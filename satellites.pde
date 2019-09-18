@@ -18,7 +18,7 @@ Planet moon_setup(){
 Planet phobos_setup(){
   img_phobos = loadImage("assets/imgs/phobos.jpg");
   
-  float r_phobos = 0.5*r_mars;
+  float r_phobos = 0.2*r_mars;
   PVector axis_phobos = new PVector(0, 1, 0);
   PVector dir_phobos = new PVector(1, 1, 0);
   dir_phobos.mult(5);
@@ -31,7 +31,7 @@ Planet phobos_setup(){
 Planet deimos_setup(){
   img_deimos = loadImage("assets/imgs/deimos.jpg");
   
-  float r_deimos = 0.5*r_mars;
+  float r_deimos = 0.2*r_mars;
   PVector axis_deimos = new PVector(0, 1, 0);
   PVector dir_deimos = new PVector(1, 0, 1);
   dir_deimos.mult(4);
@@ -44,7 +44,7 @@ Planet deimos_setup(){
 Planet io_setup(){
   img_io = loadImage("assets/imgs/io.jpg");
   
-  float r_io = 0.05*r_jupiter;
+  float r_io = 0.03*r_jupiter;
   PVector axis_io = new PVector(0, 1, 0);
   PVector dir_io = new PVector(1, 0, 1);
   dir_io.mult(r_jupiter+5);
@@ -57,7 +57,7 @@ Planet io_setup(){
 Planet europa_setup(){
   img_europa = loadImage("assets/imgs/europa.jpg");
   
-  float r_europa = 0.05*r_jupiter;
+  float r_europa = 0.025*r_jupiter;
   PVector axis_europa = new PVector(0, 1, 0);
   PVector dir_europa = new PVector(0, 1, 1);
   dir_europa.mult(r_jupiter+5);
@@ -70,7 +70,7 @@ Planet europa_setup(){
 Planet ganymede_setup(){
   img_ganymede = loadImage("assets/imgs/ganymede.jpg");
   
-  float r_ganymede = 0.05*r_jupiter;
+  float r_ganymede = 0.02*r_jupiter;
   PVector axis_ganymede = new PVector(0, 1, 0);
   PVector dir_ganymede = new PVector(1, 1, 0);
   dir_ganymede.mult(r_jupiter+5);
@@ -83,7 +83,7 @@ Planet ganymede_setup(){
 Planet callisto_setup(){
   img_callisto = loadImage("assets/imgs/callisto.jpg");
   
-  float r_callisto = 0.05*r_jupiter;
+  float r_callisto = 0.015*r_jupiter;
   PVector axis_callisto = new PVector(0, 1, 0);
   PVector dir_callisto = new PVector(0, 1, 1);
   dir_callisto.mult(r_jupiter+5);

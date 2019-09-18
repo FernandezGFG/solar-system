@@ -47,7 +47,7 @@ void sun_draw(){
   pointLight(255, 255, 255, 0, 0, -z_index);
   pointLight(255, 255, 255, 0, 0, z_index);
   
-  background(0);
+  background(img_background);
   
   sun.show();
 }
