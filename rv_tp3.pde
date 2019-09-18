@@ -8,8 +8,13 @@ void setup(){
   camera = new PeasyCam(this, 500);
   
   sun_setup();
+  planet_setup();
 }
 
 void draw(){
-  sun_draw();
+  if(flag_mode){
+    sun_draw();
+  } else {
+    planet_draw();
+  }
 }

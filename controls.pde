@@ -6,6 +6,8 @@
  * @author Gonzalo G. Fernández
  * @version 1.0 17/09/19
  */
+ 
+boolean flag_mode;
 
 void keyPressed(){
   // Arrow keys
@@ -16,12 +18,22 @@ void keyPressed(){
     flag_arrow = -1;
   }
   
+  if (keyCode == UP){
+    index++;
+  }
+  if (keyCode == DOWN){
+    index--;
+  }
+  
   // Other commands
   if (key == 'D'){
     flag_rot = false;
   }
   if (key == 'R'){
     flag_rot = true;
+  }
+  if (key == 'T'){
+    flag_mode = !flag_mode;
   }
   
 }
