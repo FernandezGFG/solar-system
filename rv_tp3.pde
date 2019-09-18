@@ -4,6 +4,7 @@ PeasyCam camera;
 
 void setup(){
   size(600, 600, P3D);
+  surface.setTitle("Solar System");
   
   camera = new PeasyCam(this, 500);
   
