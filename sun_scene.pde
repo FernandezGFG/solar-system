@@ -1,3 +1,12 @@
+/**
+ * Processing
+ * sun_scene.pde
+ * Purpose: Show solar system.
+ *
+ * @author Gonzalo G. Fernández
+ * @version 1.0 17/09/19
+ */
+
 Planet sun;
 
 PImage img_sun;

@@ -1,3 +1,12 @@
+/**
+ * Processing
+ * planets.pde
+ * Purpose: All planets data.
+ *
+ * @author Gonzalo G. Fernández
+ * @version 1.0 17/09/19
+ */
+
 Planet earth, mercury, venus, mars, jupiter, saturn;
 
 PImage img_earth, img_mercury, img_venus, img_mars, img_jupiter, img_saturn;
@@ -107,7 +116,8 @@ Planet saturn_setup(){
   saturn = new Planet("Saturn", r_saturn, dir_saturn, 0.005, axis_saturn, 0.006, img_saturn, 50);
   
   // Add satellite
-  Planet[] sats = {};
+  titan = titan_setup();
+  Planet[] sats = {titan};
   saturn.setSattelites(sats);
   
   return saturn;

@@ -148,6 +148,10 @@ public class Planet {
   }
   
   void orbit(){
+    /**
+     * Parameters modificaten to make the objects orbit.
+     */
+     
     rotateGlobe(1);
     translateGlobe(1);
     // println(id + ":" + angle + "-" + angle_sun);

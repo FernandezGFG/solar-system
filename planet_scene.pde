@@ -1,3 +1,12 @@
+/**
+ * Processing
+ * planet_scene.pde
+ * Purpose: Show one planet with the satellites.
+ *
+ * @author Gonzalo G. Fernández
+ * @version 1.0 17/09/19
+ */
+
 PImage img_background;
 int index;
 Planet[] planets = new Planet[6];

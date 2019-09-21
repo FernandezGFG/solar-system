@@ -1,11 +1,22 @@
-Planet moon, phobos, deimos, io, europa, ganymede, callisto;
+/**
+ * Processing
+ * satellites.pde
+ * Purpose: All satellites data
+ *
+ * @author Gonzalo G. Fernández
+ * @version 1.0 17/09/19
+ */
 
-PImage img_moon, img_phobos, img_deimos, img_io, img_europa, img_ganymede, img_callisto;
+Planet moon, phobos, deimos, io, europa, ganymede, callisto, titan;
+
+PImage img_moon, img_phobos, img_deimos, img_io, img_europa, img_ganymede, img_callisto, img_titan;
+
+float r_moon;
 
 Planet moon_setup(){
   img_moon = loadImage("assets/imgs/moon.jpg");
   
-  float r_moon = 0.2725*r_earth;
+  r_moon = 0.2725*r_earth;
   PVector axis_moon = new PVector(0, 1, 0);
   PVector dir_moon = new PVector(1, 1, 0);
   dir_moon.mult(10);
@@ -91,4 +102,17 @@ Planet callisto_setup(){
   callisto = new Satellite("Callisto", r_callisto, dir_callisto, 0.005, axis_callisto, 0.008, img_callisto);
   
   return callisto;
+}
+
+Planet titan_setup(){
+  img_titan = loadImage("assets/imgs/titan.jpg");
+  
+  float r_titan = 1.48*r_moon;
+  PVector axis_titan = new PVector(0, 1, 0);
+  PVector dir_titan = new PVector(0, 1, 1);
+  dir_titan.mult(r_saturn+5);
+    
+  titan = new Satellite("Titan", r_titan, dir_titan, 0.005, axis_titan, 0.008, img_titan);
+  
+  return titan;
 }

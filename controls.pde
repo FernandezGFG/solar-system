@@ -31,6 +31,7 @@ void keyPressed(){
   }
   if (key == 'R'){
     flag_rot = true;
+    index++;
   }
   if (key == 'T'){
     flag_mode = !flag_mode;
